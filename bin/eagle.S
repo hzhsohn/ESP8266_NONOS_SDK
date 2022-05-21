@@ -33080,7 +33080,7 @@ void ICACHE_FLASH_ATTR user_pre_init(void)
 40224523:	f0c112        	addi	a1, a1, -16
     if(!system_partition_table_regist(at_partition_table, sizeof(at_partition_table)/sizeof(at_partition_table[0]),SPI_FLASH_SIZE_MAP)) {
 40224526:	06a032        	movi	a3, 6
-40224529:	02a042        	movi	a4, 2
+40224529:	03a042        	movi	a4, 3
     }
 	
 }
@@ -33122,8 +33122,8 @@ user_init(void)
 4022455c:	fffb21        	l32r	a2, 40224548 <user_pre_init+0x28>
 4022455f:	b2b701        	l32r	a0, 4021103c <esp_random+0x40>
 40224562:	0000c0        	callx0	a0
-	smartconfig_set_type(SC_TYPE_AIRKISS); //SC_TYPE_ESPTOUCH,SC_TYPE_AIRKISS,SC_TYPE_ESPTOUCH_AIRKISS
-40224565:	120c      	movi.n	a2, 1
+	smartconfig_set_type(SC_TYPE_ESPTOUCH_AIRKISS); //SC_TYPE_ESPTOUCH,SC_TYPE_AIRKISS,SC_TYPE_ESPTOUCH_AIRKISS
+40224565:	220c      	movi.n	a2, 2
 40224567:	1a10c5        	call0	4023e674 <smartconfig_set_type>
     wifi_set_opmode(STATION_MODE);
 4022456a:	120c      	movi.n	a2, 1

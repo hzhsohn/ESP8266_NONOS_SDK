@@ -1,0 +1,244 @@
+﻿<!doctype html>
+<html>
+<head>
+<title>Index</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,minimal-ui"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+<meta name="apple-mobile-web-app-capable" content="no"/>
+<meta name="apple-touch-fullscreen" content="no"/>
+<style type="text/css">
+.b-gry {
+margin-left:auto;
+margin-right:auto;
+max-width: 500px;
+background: #EEE;
+padding: 25px 15px 25px 10px;
+color: #777;
+text-shadow: 1px 1px 1px #FFF;
+border:1px solid #E4E4E4;
+font-family: Tahoma, Geneva, sans-serif;
+font-size: 14px;
+}
+.b-gry h1 {
+font-size: 25px;
+padding: 0px 0px 10px 0px;
+display: block;
+border-bottom:1px solid #E4E4E4;
+margin: -10px -15px 30px -10px;;
+color: #777;
+text-align:center;
+}
+.b-gry h1>span {
+display: block;
+font-size: 11px;
+font-weight:100;
+margin-top:10px;
+}
+.line {
+display: block;
+margin: 0px;
+}
+.line>span {
+float: left;
+width: 22%;
+text-align: right;
+padding-right: 10px;
+margin-top: 12px;
+color: #777;
+font-size: 16px;
+}
+.b-gry .input_text{
+border: 1px solid #DADADA;
+color: #777;
+height: 30px;
+margin-bottom: 16px;
+margin-right: 6px;
+margin-top: 2px;
+outline: 0 none;
+padding: 3px 3px 3px 5px;
+font-size: 12px;
+line-height:15px;
+box-shadow: inset 0px 1px 4px #ECECEC;
+-moz-box-shadow: inset 0px 1px 4px #ECECEC;
+-webkit-box-shadow: inset 0px 1px 4px #ECECEC;
+}
+.b-gry .button {
+border: none;
+padding: 10px 25px 10px 25px;
+color: #FFF;
+box-shadow: 1px 1px 5px #B6B6B6;
+border-radius: 3px;
+text-shadow: 1px 1px 1px #9E3F3F;
+cursor: pointer;
+width:50%;
+font-size:20px;
+margin:30px 0px 10px 0px;
+-webkit-appearance: none;
+background-color: #E06969;
+}
+.b-gry .button:hover {
+background: #CF7A7A
+}
+.b-gry .txt_btn {
+border: none;
+color: #FFF;
+box-shadow: 1px 1px 5px #666;
+border-radius: 3px;
+text-shadow: 1px 1px 1px #999;
+cursor: pointer;
+width:20%;
+font-size:14px;
+-webkit-appearance: none;
+padding-top: 9px;
+padding-right: 6px;
+padding-bottom: 9px;
+padding-left: 6px;
+background-color: #444;
+text-decoration: none;
+}
+.b-gry .txt_btn:hover {background-color: #569CD6;}
+h3{text-align:center;}
+.container{position:relative;width:100%;min-height:100%;}
+.body{padding-bottom:50px;}
+.footer{
+position:fixed;
+bottom:0px;
+left:0px;
+right: 0px;
+padding: 10px 20px;
+border-top: 1px solid #E7EAEC;
+background: #EEE none repeat scroll 0px 0px;
+color: #888;
+font-weight: bold;
+text-align: center;	
+}
+.container #ssidlist ul li {
+font-size: 18px;
+text-decoration: none;
+text-align: center;
+width: 85%;
+border-bottom-width: 1px;
+border-bottom-style: inset;
+border-bottom-color: #999;
+padding: 16px;
+list-style-type: none;
+}
+.container #ssidlist ul li a {
+color: #333;
+text-decoration: none;
+}
+.tt{
+font-family:Verdana, Geneva, sans-serif;
+font-size:14px;
+padding: 10px 24px;}
+.container #ssidlist ul {
+margin-bottom: 50px;
+}
+</style>
+</head>
+<script type="text/javascript">
+<!-- 
+function validate_form(){
+var ssid=document.form1.ssid.value;
+if(ssid==""){
+alert("ssid cannot be empty");
+return false;
+}
+document.form1.submit();
+}
+var isSSIDShow=0;
+function ssidShowHidden(){
+if(0==isSSIDShow)
+{ ssidShow(); }
+else
+{ ssidHidden(); }
+}
+function ssidHidden(){
+isSSIDShow=0;
+document.getElementById("ssidlist").style.display="none";
+}
+function ssidShow(){
+isSSIDShow=1;
+document.getElementById("ssidlist").style.display="";
+}
+function GetQueryString(name)
+{
+var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)");
+var r = window.location.search.substr(1).match(reg);
+if(r!=null)return unescape(r[2]); return null;
+}
+function ln(ssid_name)
+{
+document.getElementById("ssid").value=ssid_name;
+ssidHidden();
+}
+</script>
+<body>
+<div class="container">
+<div class="body">
+<div class="b-gry">
+<form name="form1" action="save.htm" method="get">
+<h1 > <span> </span>
+</h1>
+<div class="line">
+<h3>WIFI Connect</h3>
+<span>SSID :</span>
+<input id="ssid" type="text" name="ssid"  style="width:70%" class="input_text" placeholder='Input Wifi SSID'/>
+<!--<input type="button" class="txt_btn" value="Options" onClick="ssidShowHidden()"/>!-->
+</div>
+<div id="ssidlist"><ul id=ssidShow></ul></div>
+<div class="line">
+<span>Password:</span>
+<input id="wifipwd" type="text" name="wifipwd" style="width:70%" class="input_text" placeholder='Input Password'/>
+</div>
+<!-- 
+<h3>互联网控制</h3>
+<div class="line" >
+<span>CAID码 :</span>
+<input name="caid" type="text" class="input_text" id="caid" style="width:70%" value="{caid}" placeholder='输入CAID区域控制码'/>
+</div>
+!-->
+<div class="line" align=center>
+<input type="button" class="button" value="Save&Reset" onClick="validate_form()"/>
+<input type=hidden name="ckd" id="ckd" value="{ckd}">
+</div>     
+</form>
+</div>   
+</div>
+<div class="footer">     
+<div>
+<center>
+<strong>  </strong>
+</center>
+</div>
+</div>
+</div>
+</body>
+<script type="text/javascript">
+<!--
+function onload() 
+{
+form1.ssid.value=GetQueryString("ssid");
+ssidHidden();
+var arr=new Array({li});
+/*var arr=new Array();
+arr[0]="*]aaaaa";
+arr[1]="bbbb";
+arr[2]="*]ccc*]ccc";
+arr[3]="dd*]dd";
+arr[4]="*]*]eeee";*/
+var str="";
+for(var j = 0; j <arr.length; j++) {
+a=arr[j];
+c=b=a;
+if(a.indexOf("*]")==0)b=a.replace("*]","🔒 ");
+if(a.indexOf("*]")==0)c=a.replace("*]","");
+str+="<li><a href=# onClick=\"ln('"+c+"')\">"+b+"</a></li>";
+}
+document.getElementById("ssidShow").innerHTML=str;
+}
+window.onload=onload();
+-->
+</script>
+</html>

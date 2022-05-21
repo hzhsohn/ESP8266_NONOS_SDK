@@ -1,0 +1,20 @@
+{
+"version":"iot_cdled_v1.0.0",
+
+"uart_show_debug":true,
+"uart_bit": 115200,
+
+"udp_multip":"228.0.0.8",
+"udp_port":2288,
+"dev_flag":"AromMachine",
+
+"ap_ssid":"CN-FLAMPS",
+"ap_passwd":"",
+"def_name":"Arom@",
+
+"dpid":"9483a211bbf421aa4b06d797c08d1c25",
+"yun_host":"iot.d.hx-kong.com",
+"yun_port":6100,
+
+"sta_web_startup":false
+}
